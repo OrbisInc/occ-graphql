@@ -1,0 +1,6 @@
+Add-Migration Initial -Project Occ.Data -StartupProject Occ.GraphQLMiddlewareServer
+
+
+Update-Database -Project Occ.Data -StartupProject Occ.GraphQLMiddlewareServer
+
+

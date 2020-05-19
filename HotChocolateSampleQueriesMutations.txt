@@ -1,0 +1,112 @@
+
+
+
+
+{
+  orders {
+    dateOrdered
+    deliveryCity
+    notes
+    orderItems {
+      notes
+      product {
+        description
+        price
+      }
+    }
+  }
+}
+
+# Skip and take are optional, using the custom EF Query Here.
+# Note: Custom EF Query
+
+{
+  orders(skip: 2 take: 2) {
+    dateOrdered
+    deliveryCity
+    notes
+    orderItems {
+      notes
+      product {
+        description
+        price
+      }
+    }
+  }
+}
+
+
+# Note: Custom EF Query
+
+{
+  order(orderId: 1) {
+    dateOrdered
+    deliveryAddress
+    deliveryCity
+    notes
+  }
+}
+
+
+#Queries using Attributes on class -> OrderQueriesUsingAttributes.cs
+#######################################
+[UseSelection]
+[UseFiltering]
+[UseSorting]
+#######################################
+
+#Filtering  Worked
+query {
+  orders(where: { OR: [{ orderId: 1 }, { orderId: 2 }] }) {
+    dateOrdered
+    deliveryCity
+    notes
+    orderId 
+    orderItems {
+      notes
+      product {
+        description
+        price
+      }
+    }
+  }
+}
+
+#Sorting did not work
+
+query {
+  orders (order_by: deliveryAddress){
+    dateOrdered
+    deliveryCity
+    notes
+    orderItems {
+      notes
+      product {
+        description
+        price
+      }
+    }
+  }
+}
+
+
+
+#Paging Did not Work
+
+query {
+  orders(first: 1 skip: 1) { 
+    dateOrdered
+    deliveryCity
+    notes
+    orderId    
+    pageInfo {
+      hasNextPage
+      endCursor
+    }
+  }
+}
+
+
+
+
+

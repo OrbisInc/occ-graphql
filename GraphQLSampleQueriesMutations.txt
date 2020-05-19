@@ -1,0 +1,24 @@
+
+get All Orders
+
+{
+  orders {
+    deliveryAddress
+    deliveryCity
+    deliveryPostalCode
+    dateOrdered
+    notes 
+  }
+}
+
+Get One Order
+
+
+{
+  order(orderId: 1) {
+    dateOrdered
+    deliveryAddress
+    deliveryCity
+    notes
+  }
+}
