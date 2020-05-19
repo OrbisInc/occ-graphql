@@ -5,13 +5,14 @@ Evaluating implementations GraphQL implementations ( graphql-dotnet and  hotchoc
 
 There are two examples, one using graphql-dotnet and one using hotchocolate.
 
-graphql-dotnet 
-https://github.com/graphql-dotnet/graphql-dotnet
+graphql-dotnet
+ https://github.com/graphql-dotnet/graphql-dotnet
 This library has been out the longest.
 Unfortunately, does not work well with .Net Core 3.1, and is not as active as the Hotchocolate platform.
 
-
-
-
 To run the Occ.GraphQLMiddlewareServer (graphql-dotnet)
-In project Occ.GraphQLMiddlewareServer, Edit the appsettings.json file and edit the Server   
+In project Occ.GraphQLMiddlewareServer, Edit the appsettings.json file and edit the GraphQLDB sql connection string for your local instance of Sql Server.
+
+Run : Occ.GraphQLMiddlewareServer 
+
+
