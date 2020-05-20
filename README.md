@@ -1,10 +1,11 @@
 # occ-graphql
 GraphQL Prototypes, using Entity Framework/Sql Server Database for the data source and .Net Core 3.1. 
 
-Evaluating GraphQL implementations ( graphql-dotnet and  hotchocolate)
+In this Repo, Evaluating GraphQL implementations ( graphql-dotnet and  hotchocolate)
 
 
 There are two examples, one using graphql-dotnet and one using hotchocolate.
+Both Examples, expose one endpoint, where can sumbit queries.
 
 graphql-dotnet
  https://github.com/graphql-dotnet/graphql-dotnet
@@ -16,4 +17,8 @@ In project Occ.GraphQLMiddlewareServer, Edit the appsettings.json file and edit 
 
 Run : Occ.GraphQLMiddlewareServer 
 
-A browser should appear , where you can place in 
+A browser should appear , where you can place in sample queeries/mutations.
+
+Copy and paste sample queries from GraphQLSampleQueriesMutations.txt into the sample window.
+
+As me
