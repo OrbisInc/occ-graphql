@@ -7,7 +7,7 @@ In this Repo, Evaluating GraphQL implementations ( graphql-dotnet and  hotchocol
 There are two examples, one using graphql-dotnet and one using hotchocolate.
 Both Examples, expose one endpoint, where can sumbit queries.
 
-graphql-dotnet
+graphql-dotnet:
 https://github.com/graphql-dotnet/graphql-dotnet
 
 This library has been out the longest.
@@ -50,7 +50,18 @@ https://app.pluralsight.com/library/courses/building-graphql-apis-aspdotnet-core
 
 --------------------------------------------------------------------------
 
+hotchocolate:
+https://github.com/ChilliCream/hotchocolate
 
+This library is very active
+Works well, but not all requirements, as below, were not met.
+Personally, I prefer interacting and using this library over the above graphql-dotnet library.
 
+To run the Occ.HotChocolateMiddlewareServer (hotchocolate):
+In project Occ.GraphQLMiddlewareServer, Edit the appsettings.json file and edit the GraphQLDB sql connection string for your local instance of Sql Server.
 
+Run : Occ.HotChocolateMiddlewareServer
 
+A browser should appear (https://localhost:5001/), where you can place in sample queries/mutations.
+
+Copy and paste sample queries from GraphQLSampleQueriesMutations.txt into the sample window.
