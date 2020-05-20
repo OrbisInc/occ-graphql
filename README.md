@@ -9,6 +9,7 @@ Both Examples, expose one endpoint, where can sumbit queries.
 
 graphql-dotnet
 https://github.com/graphql-dotnet/graphql-dotnet
+
 This library has been out the longest.
 Unfortunately, does not work well with .Net Core 3.1, and is not as active as the Hotchocolate platform.
 
