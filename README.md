@@ -62,6 +62,35 @@ In project Occ.GraphQLMiddlewareServer, Edit the appsettings.json file and edit 
 
 Run : Occ.HotChocolateMiddlewareServer
 
-A browser should appear (https://localhost:5001/), where you can place in sample queries/mutations.
+A browser should appear (https://localhost:5001/playground), where you can place in sample queries/mutations.
 
-Copy and paste sample queries from GraphQLSampleQueriesMutations.txt into the sample window.
+Copy and paste sample queries from HotChocolateSampleQueriesMutations.txt into the sample window.
+
+For story CC-1084:
+1) GraphQL can be properly configured in ASP.NET Core. 
+Yes. 
+
+2) We can perform a basic query and retrieve the proper data:
+Yes. In this example can query the order entity
+
+3) We can perform aggregate queries, i.e. counts, sums, etc. : Not in sample, but could write custom linq query to do this
+
+4) We can add custom SQL functions / bridge between queries and SQL : Not in sample, but could write custom linq query to do this.
+
+5) It's efficient with complex trees of relationships (compare cache query speeds with and without GraphQL) : Yes, IQueryable interface is exposed, where can query relationship structure -> Orders -> OrderItems -> Product
+
+6) GraphQL can perform filters, sorts, and pagination : Could not get to work, but supposedly supports it. See samples in HotChocolateSampleQueriesMutations.txt  
+
+7) Can we implement proper security / roles for different tables & entities: There is only one endpoint exposed. No.
+
+Summary : I preferred this implementation to the graphql-dotnet.
+As in the code, there is an IQueryable interface that is exposed for you EF Entity Relationship. From there you can Select, Query, Filter, Sort. (Note: Could not get the Filter and Sort to work properly). The documentation for this library is quite sparse at the moment. Before committing to it, must perform more tests.
+
+Some other resources for : https://github.com/ChilliCream/hotchocolate
+
+1) https://dev.to/michaelstaib/get-started-with-hot-chocolate-and-entity-framework-e9i
+
+
+
+
+
