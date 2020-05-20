@@ -79,12 +79,12 @@ Yes. In this example can query the order entity
 
 5) It's efficient with complex trees of relationships (compare cache query speeds with and without GraphQL) : Yes, IQueryable interface is exposed, where can query relationship structure -> Orders -> OrderItems -> Product
 
-6) GraphQL can perform filters, sorts, and pagination : Could not get to work, but supposedly supports it. See samples in HotChocolateSampleQueriesMutations.txt  
+6) GraphQL can perform filters, sorts, and pagination : Filters worked, but could not get sorts and pagination to work. See samples in HotChocolateSampleQueriesMutations.txt  
 
 7) Can we implement proper security / roles for different tables & entities: There is only one endpoint exposed. No.
 
 Summary : I preferred this implementation to the graphql-dotnet.
-As in the code, there is an IQueryable interface that is exposed for you EF Entity Relationship. From there you can Select, Query, Filter, Sort. (Note: Could not get the Filter and Sort to work properly). The documentation for this library is quite sparse at the moment. Before committing to it, must perform more tests.
+As in the code, there is an IQueryable interface that is exposed for your EF Entity Relationship. From there you can Select, Query, Filter, Sort. (Note: Could not get the Filter and Sort to work properly). The documentation for this library is quite sparse at the moment. Before committing to it, must perform more tests.
 
 Some other resources for : https://github.com/ChilliCream/hotchocolate
 
