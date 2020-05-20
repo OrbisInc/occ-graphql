@@ -41,5 +41,6 @@ Summary : This was the first .Net Implementation of .Net Core. Looked promising 
 
 Some other resources for : https://github.com/graphql-dotnet/graphql-dotnet
 
-
+1) Below is a GraphQL course using above GitHub Package. Short course, good intro into GraphQL. This course is a .Net Core 2.1, that is working properly. Also includes mutations (ie Update/Insert/Delete) using GraphQl 
+https://app.pluralsight.com/library/courses/building-graphql-apis-aspdotnet-core/table-of-contents
 
