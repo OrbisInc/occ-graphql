@@ -103,7 +103,9 @@ As in the code, there is an IQueryable interface that is exposed for your EF Ent
 
 Some other resources for : https://github.com/ChilliCream/hotchocolate
 
-1) https://dev.to/michaelstaib/get-started-with-hot-chocolate-and-entity-framework-e9i
+1) https://dev.to/mnsr/entity-framework-dotnet-core-with-graphql-and-sql-server-using-hotchocolate-4fl6
+
+2) https://dev.to/michaelstaib/get-started-with-hot-chocolate-and-entity-framework-e9i
 
 
 
