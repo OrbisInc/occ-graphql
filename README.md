@@ -17,8 +17,18 @@ In project Occ.GraphQLMiddlewareServer, Edit the appsettings.json file and edit 
 
 Run : Occ.GraphQLMiddlewareServer 
 
-A browser should appear , where you can place in sample queeries/mutations.
+A browser should appear (https://localhost:5001/) GraphiQL, where you can place in sample queries/mutations.
 
 Copy and paste sample queries from GraphQLSampleQueriesMutations.txt into the sample window.
 
-As me
+For story CC-1084:
+1) GraphQL can be properly configured in ASP.NET Core, yes, but when using .Net Core 3.1, using pre-release libraries. Additonally could not get all the Acceptance Criteria as below working properly. 
+
+2) We can perform a basic query and retrieve the proper data:
+Yes
+
+3) We can perform aggregate queries, i.e. counts, sums, etc. : Not in sample, but could write custom linq query to do this
+
+4) We can add custom SQL functions / bridge between queries and SQL : Not in sample, but could write custom linq query to do this.
+
+5) It's efficient with complex trees of relationships (compare cache query speeds with and without GraphQL) : Could not get relationship query to work properly. Ie: in Entity model had Orders -> OrderItems -> Product relationship. Could not 
