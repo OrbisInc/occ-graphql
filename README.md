@@ -86,6 +86,21 @@ Yes. In this example can query the order entity
 Summary : I preferred this implementation to the graphql-dotnet.
 As in the code, there is an IQueryable interface that is exposed for your EF Entity Relationship. From there you can Select, Query, Filter, Sort. (Note: Could not get the Filter and Sort to work properly). The documentation for this library is quite sparse at the moment. Before committing to it, must perform more tests.
 
+
+// Note: For this sample, this was the EF Method exposed.
+ public class OrderQueriesUsingAttributes
+    {
+      //  [UsePaging]
+        [UseSelection]
+        [UseFiltering]
+        [UseSorting(SortType = typeof(Order))]
+        public IQueryable<Order> GetOrders([Service]DatabaseContext context) =>
+            context.Orders;
+
+    }
+
+
+
 Some other resources for : https://github.com/ChilliCream/hotchocolate
 
 1) https://dev.to/michaelstaib/get-started-with-hot-chocolate-and-entity-framework-e9i
